@@ -71,11 +71,13 @@ export function executeWork(employee: DirectorInterface | TeacherInterface): str
 
 type Subjects = "Math" | "History";
 
-export function teachClass(todayClass:Subjects): string {
+export function teachClass(todayClass:Subjects): string | null {
   if (todayClass === "Math") {
     return "Teaching Math";
   } else if (todayClass === "History") {
     return "Teaching History";
+  } else {
+    return null;
   }
 }
 
